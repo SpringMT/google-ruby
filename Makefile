@@ -6,8 +6,14 @@ build25:
 build26:
 	cd 2.6 && docker build --pull --build-arg ruby_version=2.6.5 -t ${PREFIX}/google-ruby:2.6 .
 
-push25: build25 build26
+build27:
+	cd 2.7 && docker build --pull --build-arg ruby_version=2.7.0-preview2 -t ${PREFIX}/google-ruby:2.7 .
+
+push25: build25
 	docker push ${PREFIX}/google-ruby:2.5
 
 push26: build26
 	docker push ${PREFIX}/google-ruby:2.6
+
+push27: build27
+	docker push ${PREFIX}/google-ruby:2.7
