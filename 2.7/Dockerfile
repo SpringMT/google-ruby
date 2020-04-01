@@ -33,7 +33,7 @@ RUN apt-get update -y \
     && rm -f /var/lib/apt/lists/*_* \
     && mkdir -p /opt/nodejs \
     && git clone https://github.com/rbenv/ruby-build.git \
-    && (curl -s https://nodejs.org/dist/v10.15.2/node-v10.15.2-linux-x64.tar.gz \
+    && (curl -s https://nodejs.org/dist/v10.16.3/node-v10.16.3-linux-x64.tar.gz \
         | tar xzf - --directory=/opt/nodejs --strip-components=1) \
     && ln -s /opt/nodejs /nodejs
 
