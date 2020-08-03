@@ -1,4 +1,4 @@
-FROM gcr.io/gcp-runtimes/ubuntu_16_0_4
+FROM gcr.io/gcp-runtimes/ubuntu_18_0_4
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG ruby_version
