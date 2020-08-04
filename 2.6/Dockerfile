@@ -31,11 +31,7 @@ RUN apt-get update -y \
     && apt-get upgrade -yq \
     && apt-get clean \
     && rm -f /var/lib/apt/lists/*_* \
-    && mkdir -p /opt/nodejs \
-    && git clone https://github.com/rbenv/ruby-build.git \
-    && (curl -s https://nodejs.org/dist/v10.16.3/node-v10.16.3-linux-x64.tar.gz \
-        | tar xzf - --directory=/opt/nodejs --strip-components=1) \
-    && ln -s /opt/nodejs /nodejs
+    && git clone https://github.com/rbenv/ruby-build.git
 
 COPY files /root
 
